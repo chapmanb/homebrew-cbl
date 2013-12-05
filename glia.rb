@@ -29,6 +29,9 @@ class Glia < Formula
   depends_on 'google-sparsehash'
 
   def install
+    inreplace 'Makefile' do |s|
+      s.change_make_var! 'INCLUDES', "-I#{HOMEBREW_PREFIX}/include -I$(BAMTOOLS_ROOT)/include -Ivcflib/src -Ivcflib/"
+    end
     system 'make'
     bin.install 'glia'
   end
