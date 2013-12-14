@@ -22,6 +22,8 @@ class Samtools < Formula
       s.change_make_var! 'INCLUDES', "-I. -I#{htslib}/include"
       s.gsub! '$(HTSDIR)/htslib/', '$(HTSDIR)/include/htslib/'
     end
+    # Write version since current Makefile logic fails on non-gmake systems
+    system "echo '#define SAMTOOLS_VERSION \"#{version}\"' > version.h"
     system 'make'
     system 'make', 'install', 'prefix=' + prefix
   end
