@@ -38,6 +38,7 @@ class Samtools < Formula
     else
         system 'make'
         bin.install %w{samtools}
+        bin.install %w{bcftools/vcfutils.pl}
         bin.install %w{misc/maq2sam-long misc/maq2sam-short misc/md5fa misc/md5sum-lite misc/wgsim}
         bin.install Dir['misc/*.pl']
         lib.install 'libbam.a'
