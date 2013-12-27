@@ -22,8 +22,8 @@ end
 
 class Vcflib < Formula
   homepage 'https://github.com/ekg/vcflib'
-  version '2013-11-30'
-  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => '506b80ac6b'
+  version '2013-12-18'
+  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => '74d161ec9a'
 
   def install
     system 'make'
