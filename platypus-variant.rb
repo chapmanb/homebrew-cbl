@@ -1,6 +1,6 @@
 require 'formula'
 
-class Platypus < Formula
+class PlatypusVariant < Formula
   homepage 'http://www.well.ox.ac.uk/platypus'
   version '0.5.2'
   url 'http://www.well.ox.ac.uk/bioinformatics/Software/Platypus-latest.tgz'
