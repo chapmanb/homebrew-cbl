@@ -2,8 +2,8 @@ require 'formula'
 
 class Vt < Formula
   homepage 'https://github.com/atks/vt'
-  version '2014-02-01'
-  url 'https://github.com/atks/vt.git', :revision => '576b299c01'
+  version '2014-02-21'
+  url 'https://github.com/atks/vt.git', :revision => '1f867ee0a5ae'
 
   def install
     system 'make'

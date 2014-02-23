@@ -9,11 +9,8 @@ class RecursiveGitDownloadStrategy < GitDownloadStrategy
   def stage
     FileUtils.cp_r Dir[@clone+"{.}"], Dir.pwd
   end
-  def clone_repo
-    safe_system 'git', *clone_args
-    fetch
-  end
-  def reset
+  def repo_valid?
+    false
   end
   def submodules?
     false
@@ -22,11 +19,10 @@ end
 
 class Glia < Formula
   homepage 'https://github.com/ekg/glia'
-  version '2013-11-18'
-  url 'https://github.com/ekg/glia.git', :using => RecursiveGitDownloadStrategy, :revision => 'd1acd98e17'
+  version '2013-12-29'
+  url 'https://github.com/ekg/glia.git', :using => RecursiveGitDownloadStrategy, :revision => 'b44eca6dd6'
 
   depends_on 'cmake' => :build
-  depends_on 'google-sparsehash'
 
   def install
     inreplace 'Makefile' do |s|

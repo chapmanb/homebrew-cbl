@@ -9,11 +9,8 @@ class RecursiveGitDownloadStrategy < GitDownloadStrategy
   def stage
     FileUtils.cp_r Dir[@clone+"{.}"], Dir.pwd
   end
-  def clone_repo
-    safe_system 'git', *clone_args
-    fetch
-  end
-  def reset
+  def repo_valid?
+    false
   end
   def submodules?
     false
@@ -22,8 +19,8 @@ end
 
 class Vcflib < Formula
   homepage 'https://github.com/ekg/vcflib'
-  version '2013-12-18'
-  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => '74d161ec9a'
+  version '2014-02-19'
+  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => '1e2c464f4d0'
 
   def install
     system 'make'
