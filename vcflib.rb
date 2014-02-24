@@ -8,6 +8,7 @@ class RecursiveGitDownloadStrategy < GitDownloadStrategy
   end
   def stage
     FileUtils.cp_r Dir[@clone+"{.}"], Dir.pwd
+    checkout
   end
   def repo_valid?
     false
