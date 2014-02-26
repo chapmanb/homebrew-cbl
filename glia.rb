@@ -20,8 +20,8 @@ end
 
 class Glia < Formula
   homepage 'https://github.com/ekg/glia'
-  version '2014-02-22'
-  url 'https://github.com/ekg/glia.git', :using => RecursiveGitDownloadStrategy, :revision => '731521a368d'
+  version '2013-12-29'
+  url 'https://github.com/ekg/glia.git', :using => RecursiveGitDownloadStrategy, :revision => 'b44eca6dd6e'
 
   depends_on 'cmake' => :build
 
