@@ -5,8 +5,8 @@ class RnaStar < Formula
   version '2.3.1z'
   # Need latest alpha release to work around 13.04 compile error
   # https://groups.google.com/forum/#!topic/rna-star/13S344Jknf4
-  url 'ftp://ftp2.cshl.edu/gingeraslab/tracks/STARrelease/Alpha/STAR_2.3.1z.tgz'
-  sha1 'a8a5e5a6d9475e0558f1ee66333770fd4ed87ceb'
+  url 'https://github.com/alexdobin/STAR/archive/ENCODE_2014-03-16_2.3.1z1.tar.gz'
+  sha1 '44f285196846f7731f298e7b7f2568201de25252'
 
   def install
     bin.install 'STAR'
