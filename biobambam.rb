@@ -2,9 +2,9 @@ require 'formula'
 
 class Biobambam < Formula
   homepage 'https://github.com/gt1/biobambam'
-  version '0.0.125'
-  url 'https://github.com/gt1/biobambam/archive/0.0.125-release-20140221093621.tar.gz'
-  sha1 '29b6d384d5ff443f385c9b1733e93217126e8743'
+  version '0.0.131'
+  url 'https://github.com/gt1/biobambam/archive/0.0.131-release-20140411101450.tar.gz'
+  sha1 '31ef9b90b2198c83df50976002858ad5445f1194'
 
   depends_on 'libmaus'
 
