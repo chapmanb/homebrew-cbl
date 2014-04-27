@@ -20,8 +20,8 @@ end
 
 class Freebayes < Formula
   homepage 'https://github.com/ekg/freebayes'
-  version '0.9.13-2'
-  url 'https://github.com/ekg/freebayes.git', :using => RecursiveGitDownloadStrategy, :revision => 'a830efd1a4'
+  version '0.9.14-7'
+  url 'https://github.com/ekg/freebayes.git', :using => RecursiveGitDownloadStrategy, :revision => '2f63f475bb'
 
   depends_on 'cmake' => :build
 
