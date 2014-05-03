@@ -2,11 +2,11 @@ require 'formula'
 
 class RnaStar < Formula
   homepage 'https://code.google.com/p/rna-star'
-  version '2.3.1z'
+  version '2.3.1z3'
   # Need latest alpha release to work around 13.04 compile error
   # https://groups.google.com/forum/#!topic/rna-star/13S344Jknf4
-  url 'https://github.com/alexdobin/STAR/archive/ENCODE_2014-03-16_2.3.1z1.tar.gz'
-  sha1 '44f285196846f7731f298e7b7f2568201de25252'
+  url 'http://it-collab01.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STARreleases/Patches/STAR_2.3.1z3.tgz'
+  sha1 '843e66d8e4f3e8119596dbc15cdd30c65f43907e'
 
   def install
     bin.install 'STAR'

@@ -2,8 +2,8 @@ require 'formula'
 
 class Speedseq < Formula
   homepage 'https://github.com/cc2qe/speedseq'
-  version '2014-04-01'
-  url 'https://github.com/cc2qe/speedseq.git', :revision => '4e2e641510e07'
+  version '2014-04-10'
+  url 'https://github.com/cc2qe/speedseq.git', :revision => '65a92965f7'
 
   depends_on 'lumpy-sv' => :recommended
   depends_on 'sambamba' => :recommended
