@@ -25,6 +25,9 @@ class Cramtools < Formula
                  '-Xm'*)
                     jvm_mem_opts="$jvm_mem_opts $arg"
                     ;;
+                 '*8')
+                    pass_args="$pass_args \\*8"
+                    ;;
                  *)
                     pass_args="$pass_args $arg"
                     ;;
@@ -33,7 +36,7 @@ class Cramtools < Formula
         if [ "$jvm_mem_opts" == "" ]; then
             jvm_mem_opts="$default_jvm_mem_opts"
         fi
-        exec java $jvm_mem_opts $jvm_prop_opts -jar #{java}/cramtools-#{version}.jar $pass_args
+        eval java $jvm_mem_opts $jvm_prop_opts -jar #{java}/cramtools-#{version}.jar $pass_args
       EOS
     end
   end
