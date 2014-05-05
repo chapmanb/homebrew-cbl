@@ -33,6 +33,9 @@ class Freebayes < Formula
     cd 'vcflib' do
       system 'make'
     end
+    cd 'src' do
+      system 'make autoversion'
+    end
     system 'make'
     bin.install 'bin/freebayes'
     bin.install 'bin/bamleftalign'
