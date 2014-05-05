@@ -2,12 +2,15 @@ require 'formula'
 
 class Libmaus < Formula
   homepage 'https://github.com/gt1/libmaus'
-  version '0.0.115'
-  url 'https://github.com/gt1/libmaus/archive/0.0.115-release-20140423163910.tar.gz'
-  sha1 'fcc13c3bf825ee7134b100e94bbc8c929b107094'
+  version '0.0.117'
+  url 'https://github.com/gt1/libmaus/archive/0.0.117-release-20140501103431.tar.gz'
+  sha1 'e42bda3b656920e13262ca3294bbefe4fefd6674'
+
+  depends_on 'staden_io_lib'
 
   def install
-    system './configure', "--prefix=#{prefix}"
+    iolib = Formula["staden_io_lib"].opt_prefix
+    system './configure', "--prefix=#{prefix}", "--with-io-lib=#{iolib}"
     system 'make'
     system 'make install'
   end
