@@ -2,13 +2,14 @@ require 'formula'
 
 class Cramtools < Formula
   homepage 'http://www.ebi.ac.uk/ena/about/cram_toolkit/'
-  version '2.1'
+  version '2.1-b237'
   url 'https://github.com/enasequence/cramtools/raw/master/cramtools-2.1.jar'
-  sha1 '5a05df4523f4eb4b00dfeb0b04e8611c923afd2e'
+  sha1 '2f63d7ca31734fa8fc854c116c183d210bb5801e'
 
   def install
+    jarversion = '2.1'
     java = share / 'java'
-    java.install "cramtools-#{version}.jar"
+    java.install "cramtools-#{jarversion}.jar"
     bin.mkdir
     open(bin / 'cramtools', 'w') do |file|
       file.write <<-EOS.undent
@@ -36,7 +37,7 @@ class Cramtools < Formula
         if [ "$jvm_mem_opts" == "" ]; then
             jvm_mem_opts="$default_jvm_mem_opts"
         fi
-        eval java $jvm_mem_opts $jvm_prop_opts -jar #{java}/cramtools-#{version}.jar $pass_args
+        eval java $jvm_mem_opts $jvm_prop_opts -jar #{java}/cramtools-#{jarversion}.jar $pass_args
       EOS
     end
   end
