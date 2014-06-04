@@ -9,7 +9,7 @@ class Biobambam < Formula
   depends_on 'libmaus'
 
   def install
-    system 'export PKG_CONFIG=$(which pkg-config)'
+    system "export PKG_CONFIG=$(export PATH=#{HOMEBREW_PREFIX}/bin:$PATH && which pkg-config)"
     system './configure', "--prefix=#{prefix}"
     system 'make'
     system 'make install'

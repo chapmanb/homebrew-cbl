@@ -14,7 +14,7 @@ class Vep < Formula
   def install
     # VEP
     inreplace 'scripts/variant_effect_predictor/variant_effect_predictor.pl' do |s|
-      s.sub! 'use lib $Bin;', "use lib $Bin;\nuse lib '#{prefix}/lib';"
+      s.sub! 'use lib $Bin;', "use lib $Bin;\nuse lib '#{prefix}/lib';\nuse lib '#{prefix}/lib/Plugins';\n;"
       s.sub! "my $default_dir = join '/', ($ENV{'HOME'}, '.vep')", "my $default_dir = '#{prefix}/lib';"
     end
     inreplace 'scripts/variant_effect_predictor/INSTALL.pl' do |s|
