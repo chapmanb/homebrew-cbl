@@ -6,6 +6,7 @@ class Libmaus < Formula
   url 'https://github.com/gt1/libmaus/archive/0.0.120-release-20140507195158.tar.gz'
   sha1 'c6449ac58f83df0eba1cc980a82e57be0450f5d5'
 
+  depends_on 'pkg-config'
   depends_on 'staden_io_lib'
 
   def install
