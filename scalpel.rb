@@ -13,11 +13,18 @@ class Scalpel < Formula
 
   def install
     inreplace 'scalpel' do |s|
+      # Include PATH to perl libraries
       s.sub! 'use Usage;', "use lib '#{prefix}';\nuse Usage;"
     end
     inreplace 'Utils.pm' do |s|
+      # Ensure local scripts point to installation
       s.gsub! '$Bin/', "#{prefix}/"
+      # Use bash instead of /bin/sh default, which points to dash on ubuntu
+      s.sub! 'system($cmd)', 'system("/bin/bash -c \'$cmd\'")'
     end
+    inreplace 'Makefile', 'CXX := g++', "CXX := #{ENV.cxx}"
+    system 'make bamtools'
+    system 'make Microassembler'
     system 'make'
     prefix.install Dir['*']
     bin.install_symlink prefix / 'scalpel'
