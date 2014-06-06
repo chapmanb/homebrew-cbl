@@ -2,9 +2,9 @@ require 'formula'
 
 class Vep < Formula
   homepage 'http://ensembl.org/info/docs/variation/vep/index.html'
-  version '75'
-  url 'https://github.com/Ensembl/ensembl-tools/archive/release/75.zip'
-  sha1 '569cd1c0ab51fd9f3672efa9bacbe017c7a519bb'
+  version '75_2014-06-06'
+  url 'https://github.com/Ensembl/ensembl-tools/archive/771dfa1016c357145be7016c91e1155ae7c021f2.zip'
+  sha1 '141a8c639c442bf02d15846fab534dbe58dec3e4'
 
   resource "plugins" do
     url "https://github.com/ensembl-variation/VEP_plugins/archive/2c123faff2deef07ee094984fc44e19c48975af4.zip"
