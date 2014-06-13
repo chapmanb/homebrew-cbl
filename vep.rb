@@ -2,13 +2,18 @@ require 'formula'
 
 class Vep < Formula
   homepage 'http://ensembl.org/info/docs/variation/vep/index.html'
-  version '75_2014-06-06'
+  version '75_2014-06-12'
   url 'https://github.com/Ensembl/ensembl-tools/archive/771dfa1016c357145be7016c91e1155ae7c021f2.zip'
   sha1 '141a8c639c442bf02d15846fab534dbe58dec3e4'
 
   resource "plugins" do
     url "https://github.com/ensembl-variation/VEP_plugins/archive/2c123faff2deef07ee094984fc44e19c48975af4.zip"
     sha1 "0569239ed8255d277db034d838d6ec51b90481a8"
+  end
+
+  resource 'loftee' do
+    url 'https://github.com/konradjk/loftee/archive/545cf9ac5f25b6a6872984dd1a3197a7e7caf000.zip'
+    sha1 'a61c6196964526becfbe7afa9838d0495d7996e9'
   end
 
   def install
@@ -39,6 +44,9 @@ class Vep < Formula
       mkdir prefix / 'lib/Plugins'
       (prefix + 'lib/Plugins').install "CADD.pm"
       (prefix + 'lib/Plugins').install "dbNSFP.pm"
+    }
+    resource("loftee").stage {
+      (prefix + 'lib/Plugins').install "LoF.pm"
     }
   end
 
