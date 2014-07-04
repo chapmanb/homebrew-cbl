@@ -2,8 +2,8 @@ require 'formula'
 
 class Samblaster < Formula
   homepage 'https://github.com/GregoryFaust/samblaster'
-  url 'https://github.com/GregoryFaust/samblaster/archive/0.1.14.tar.gz'
-  sha1 '9fe3f179d30c92f0125dea9e0c5d319cef742998'
+  url 'https://github.com/GregoryFaust/samblaster/releases/download/v.0.1.16/samblaster-v.0.1.16.tar.gz'
+  sha1 '07a217a94386939ebb55ea97028aba20d5881949'
 
   def install
     system 'make'
