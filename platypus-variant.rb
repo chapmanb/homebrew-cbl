@@ -2,9 +2,9 @@ require 'formula'
 
 class PlatypusVariant < Formula
   homepage 'http://www.well.ox.ac.uk/platypus'
-  version '0.5.2'
+  version '0.7.2'
   url 'http://www.well.ox.ac.uk/bioinformatics/Software/Platypus-latest.tgz'
-  sha256 'b6fe740804206dfa86ec4b177b39e3db0b6e6923e18a961efd2c4247189f1ee1'
+  sha256 'bd1c1026301f35fb68356d8543c4f75e68c61babd9efdd0132c82e334f9bd85f'
 
   def install
     system './buildPlatypus.sh'
