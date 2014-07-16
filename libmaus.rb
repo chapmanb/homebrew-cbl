@@ -2,9 +2,9 @@ require 'formula'
 
 class Libmaus < Formula
   homepage 'https://github.com/gt1/libmaus'
-  version '0.0.120'
-  url 'https://github.com/gt1/libmaus/archive/0.0.120-release-20140507195158.tar.gz'
-  sha1 'c6449ac58f83df0eba1cc980a82e57be0450f5d5'
+  version '0.0.147'
+  url 'https://github.com/gt1/libmaus/archive/0.0.147-release-20140714102038.tar.gz'
+  sha1 '4dd3b0d7f481da958f9b5567265965513e2465f7'
 
   depends_on 'pkg-config'
   depends_on 'staden_io_lib'
