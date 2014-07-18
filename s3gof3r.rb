@@ -2,13 +2,13 @@ require 'formula'
 
 class S3gof3r < Formula
   homepage 'https://github.com/rlmcpherson/s3gof3r'
-  version '0.3.2'
+  version '0.4.0'
   if OS.mac?
-    url 'https://github.com/rlmcpherson/s3gof3r/releases/download/v0.3.2/gof3r_0.3.2_darwin_amd64.zip'
-    sha1 'aa3fbc973e75ee51fece32c5d78ebdd77b73d68a'
+    url "https://github.com/rlmcpherson/s3gof3r/releases/download/v#{version}/gof3r_#{version}_darwin_amd64.zip"
+    sha1 '9ebb0b4fef9b5dd1e90bf39b6d5d1379da8b4c95'
   else
-    url 'https://github.com/rlmcpherson/s3gof3r/releases/download/v0.3.2/gof3r_0.3.2_linux_amd64.tar.gz'
-    sha1 '3a5df0dce343a4e9be09abb0a66077faa98c74f5'
+    url "https://github.com/rlmcpherson/s3gof3r/releases/download/v#{version}/gof3r_#{version}_linux_amd64.tar.gz"
+    sha1 '98f5626407fe1148549a6a8b272f926dc024e13c'
   end
 
   def install
