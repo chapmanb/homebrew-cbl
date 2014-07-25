@@ -9,7 +9,13 @@ class Qsignature < Formula
   def install
     jarversion = '0.1pre'
     java = share / 'java'
-    java.install "*.jar"
+    java.install "qsignature-#{jarversion}.jar"
+    java.install "qpicard-#{jarversion}.jar"
+    java.install "qio-#{jarversion}.jar"
+    java.install "qcommon-#{jarversion}.jar"
+    java.install "jopt-simple-3.2.jar"
+    java.install "commons-math3-3.1.1.jar"
+    java.install "sam-1.110.jar"
     bin.mkdir
     open(bin / 'qsignature', 'w') do |file|
       file.write <<-EOS.undent
