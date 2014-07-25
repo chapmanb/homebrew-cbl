@@ -16,11 +16,12 @@ class Qsignature < Formula
     java.install "jopt-simple-3.2.jar"
     java.install "commons-math3-3.1.1.jar"
     java.install "sam-1.110.jar"
+    java.install "picard-1.110.jar"
     bin.mkdir
     open(bin / 'qsignature', 'w') do |file|
       file.write <<-EOS.undent
         #!/bin/bash
-        default_jvm_mem_opts="-Xms750m -Xmx8g"
+        default_jvm_mem_opts="-Xms750m -Xmx2g"
         jvm_mem_opts=""
         jvm_prop_opts=""
         pass_args=""
