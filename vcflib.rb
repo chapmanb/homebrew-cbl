@@ -24,6 +24,7 @@ class Vcflib < Formula
   url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => '586c5ae5d5'
 
   def install
+    ENV.deparallelize
     system 'make'
     bin.install Dir['bin/*']
   end

@@ -26,6 +26,7 @@ class Freebayes < Formula
   depends_on 'cmake' => :build
 
   def install
+    ENV.deparallelize
     mkdir 'bamtools/build' do
       system 'cmake', '..', *std_cmake_args
       system 'make'

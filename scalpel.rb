@@ -12,6 +12,7 @@ class Scalpel < Formula
   end
 
   def install
+    ENV.deparallelize
     inreplace 'scalpel' do |s|
       # Include PATH to perl libraries
       s.sub! 'use Usage;', "use lib '#{prefix}';\nuse Usage;"

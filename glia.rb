@@ -26,6 +26,7 @@ class Glia < Formula
   depends_on 'cmake' => :build
 
   def install
+    ENV.deparallelize
     system 'make'
     bin.install 'glia'
   end
