@@ -7,7 +7,9 @@ class RnaStar < Formula
   sha1 'e46fdf32e6305c4120ced2b62db073012bebf4ad'
 
   def install
+    mv('STARstatic', 'STAR')
     bin.install 'STAR'
+    bin.install_symlink '../libexec/wrappers/trans-abyss'
   end
 
 end
