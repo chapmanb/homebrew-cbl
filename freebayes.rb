@@ -31,6 +31,9 @@ class Freebayes < Formula
       system 'cmake', '..', *std_cmake_args
       system 'make'
     end
+    cd 'vcflib/fsom' do
+      system 'make'
+    end
     cd 'vcflib' do
       system 'make'
     end
