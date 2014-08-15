@@ -5,9 +5,9 @@ require 'formula'
 
 class GatkFramework < Formula
   homepage 'http://www.broadinstitute.org/gatk/'
-  version '3.2-0'
+  version '3.2-2'
   url "https://github.com/chapmanb/gatk/releases/download/v#{version}-framework/gatk-framework-#{version}.tar.gz"
-  sha1 'd443aba46b0daf0bc2e669df987cf1fcb925cfc9'
+  sha1 '1d86718f23357f3fe24118d5439f7944bc2b3f7c'
 
   def install
     java = share / 'java'
