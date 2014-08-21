@@ -11,13 +11,23 @@ class SnapAligner < Formula
     sha1 'c72952d40e167d1d86d99427a43b12fa3c1fe4cb'
   end
 
+  devel do
+    version '1.0dev.38'
+    url 'https://github.com/amplab/snap.git', :revision => '640feb7a7', :branch => 'dev'
+  end
+
   def install
-    bin.install 'snap'
-    bin.install 'snapxl' if not OS.mac?
-    doc.install Dir["*.pdf"]
+    if build.devel?
+      system 'make'
+      bin.install 'snap'
+    else
+      bin.install 'snap'
+      bin.install 'snapxl' if not OS.mac?
+      doc.install Dir["*.pdf"]
+    end
   end
 
   test do
-    system 'snapxl'
+    system 'snap'
   end
 end
