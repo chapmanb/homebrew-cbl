@@ -2,8 +2,8 @@ require 'formula'
 
 class Scalpel < Formula
   homepage 'http://scalpel.sourceforge.net/'
-  version '0.1.1-beta-2014-06-15'
-  url 'http://git.code.sf.net/p/scalpel/code.git', :revision => 'e2eaa3582'
+  version '0.2.1'
+  url 'http://downloads.sourceforge.net/project/scalpel/scalpel-0.2.1.tar.gz'
 
   patch do
     # Use samtools by chromosome to avoid pulling the full genome into memory
@@ -13,6 +13,10 @@ class Scalpel < Formula
 
   def install
     ENV.deparallelize
+    # Fix bug in HashesIO.pm 0.2.1 release -- submitted upstream
+    inreplace 'HashesIO.pm' do |s|
+      s.sub! 'sget(', 'inTarget('
+    end
     inreplace 'scalpel' do |s|
       # Include PATH to perl libraries
       s.sub! 'use Usage;', "use lib '#{prefix}';\nuse Usage;"
