@@ -1,11 +1,11 @@
 require 'formula'
 
 class Oncofuse < Formula
-  homepage 'http://www.unav.es/genetica/oncofuse.html'
-  version '1.0.6'
-  url 'http://www.unav.es/genetica/oncofuse-v1.0.6.zip'
-  sha1 '783fedbd21dde12355fa07875b0e82305bae5c51'
-
+  homepage 'https://github.com/mikessh/oncofuse'
+  version '1.0.7'
+  url 'https://github.com/mikessh/oncofuse/releases/download/v1.0.7/oncofuse-v1.0.7.zip'
+  sha1 '2070fda1a653bb487b35471372c27601028e8548'
+  
   def install
     java=share/'java/oncofuse'
     java.install Dir['*', "oncofuse-v#{version}/*"]
