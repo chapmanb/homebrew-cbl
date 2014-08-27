@@ -7,6 +7,8 @@ class Oncofuse < Formula
   sha1 '2070fda1a653bb487b35471372c27601028e8548'
   
   def install
+    # avoid confusion with __MACOSX folder
+    cd "oncofuse-v#{version}"
     java=share/'java/oncofuse'
     java.install Dir['*', "oncofuse-v#{version}/*"]
     bin.mkdir
