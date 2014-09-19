@@ -19,6 +19,8 @@ class Pindel < Formula
       system 'make'
       samtools.install Dir['*']
     end
+    inreplace "src/Makefile", "$(LDFLAGS)", ""
+    system "echo 'SAMTOOLS=#{samtools}' > Makefile.local"
     system "./INSTALL  #{samtools}"
     bin.install %w{pindel pindel2vcf sam2pindel}
   end
