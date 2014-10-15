@@ -2,8 +2,8 @@ require 'formula'
 
 class Smash < Formula
   homepage 'https://github.com/amplab/smash/tree/master/calldiff'
-  version '2014-09-05'
-  url 'https://github.com/amplab/smash.git', :revision => '8d1ed10512'
+  version '2014-09-09'
+  url 'https://github.com/amplab/smash.git', :revision => '297a6522'
 
   # depends_on 'maven'
   # depends_on 'java8' -- needs 8u11, since u20 has a build regression
