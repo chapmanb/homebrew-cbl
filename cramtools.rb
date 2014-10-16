@@ -4,7 +4,7 @@ class Cramtools < Formula
   homepage 'http://www.ebi.ac.uk/ena/about/cram_toolkit/'
   version '2.1-b237'
   url 'https://github.com/enasequence/cramtools/raw/master/cramtools-2.1.jar'
-  sha1 '2f63d7ca31734fa8fc854c116c183d210bb5801e'
+  sha1 '4e1bcb3cdf4a7f0f82785544f20114a36da5e63f'
 
   def install
     jarversion = '2.1'
