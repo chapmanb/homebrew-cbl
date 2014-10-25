@@ -20,14 +20,16 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version '1.0.0'
-  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "96c7cb9ad"
+  version '1.1.0'
+  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "a565177a8"
 
   depends_on "bamtools"
 
   def install
     inreplace "Makefile" do |s|
+      # Link bamtools dependency to external brew package
       s.gsub! "src/bamtools/include", "#{Formula["bamtools"].opt_include}/bamtools"
+      s.gsub! "-L./", "-L./ -L#{Formula["bamtools"].opt_lib}"
       s.gsub! "src/bamtools/lib/", "#{Formula["bamtools"].opt_lib}"
       s.gsub! "bamtools libbamtools.a", ""
       s.gsub! "buildWHAMBAM: libbamtools.a", "buildWHAMBAM:"
