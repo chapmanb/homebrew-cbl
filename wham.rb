@@ -20,8 +20,8 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version '1.1.0'
-  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "a565177a8"
+  version '1.2.0'
+  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "38fbb5c"
 
   depends_on "bamtools"
 
@@ -34,8 +34,10 @@ class Wham < Formula
       s.gsub! "bamtools libbamtools.a", ""
       s.gsub! "buildWHAMBAM: libbamtools.a", "buildWHAMBAM:"
     end
-    system 'make'
-    bin.install 'bin/WHAM-BAM'
+    system "make"
+    bin.install "bin/WHAM-BAM"
+    (share/"wham").install "utils/WHAM_training_data.txt"
+    (share/"wham").install "utils/classify_WHAM_vcf.py"
   end
 
   test do
