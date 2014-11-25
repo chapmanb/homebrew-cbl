@@ -38,7 +38,3 @@ class Rsem < Formula
     bin.install_symlink (share/'rsem'/'rsem-tbam2gbam')
   end
 end
-
-#    bin.install_symlink prefix / 'rsem-bam2readdepth' => 'rsem-bam2readdepth'
-#  end
-#end
