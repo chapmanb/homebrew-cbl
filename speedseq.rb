@@ -22,8 +22,8 @@ class Speedseq < Formula
   version '2014-08-22'
   url 'https://github.com/cc2qe/speedseq.git', :using => FlatGitDownloadStrategy, :revision => '4c95193a'
 
-  depends_on 'lumpy-sv' => :recommended
-  depends_on 'sambamba' => :recommended
+  depends_on 'lumpy-sv' => :optional
+  depends_on 'sambamba' => :optional
 
   def install
     inreplace 'bin/speedseq.config' do |s|
