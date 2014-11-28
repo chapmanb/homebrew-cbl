@@ -1,6 +1,6 @@
 require 'formula'
 
-class Sambamba < Formula
+class SambambaBinary < Formula
   homepage 'https://github.com/lomereiter/sambamba'
   version '0.4.7'
   if OS.mac?
