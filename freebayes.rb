@@ -27,6 +27,12 @@ class Freebayes < Formula
 
   def install
     ENV.deparallelize
+    # Build fix: https://github.com/chapmanb/homebrew-cbl/issues/14
+    if OS.mac?
+        inreplace 'vcflib/smithwaterman/Makefile' do |s|
+          s.sub! 'LDFLAGS=-Wl,-s', "LDFLAGS=-Wl,-v"
+        end
+    end
     mkdir 'bamtools/build' do
       system 'cmake', '..', *std_cmake_args
       system 'make'
