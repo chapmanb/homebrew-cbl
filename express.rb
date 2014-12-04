@@ -2,7 +2,7 @@ require 'formula'
 
 class Express < Formula
   homepage 'http://bio.math.berkeley.edu/eXpress/'
-  version '1.5.5'
+  version '1.5.1'
   if OS.mac?
     url 'http://bio.math.berkeley.edu/eXpress/downloads/express-1.5.1/express-1.5.1-macosx_x86_64.tgz'
     sha1 '44c20f99b5c775cd69ff03300225f52c23f61131'
