@@ -1,16 +1,16 @@
 require 'formula'
 
-class Qsignature < Formula
-  homepage 'http://sourceforge.net/p/adamajava/wiki/Home/'
-  version '0.1pre'
-  url 'http://downloads.sourceforge.net/project/adamajava/qsignature.tar.bz2'
-  sha1 'be0e50472221dfb7946e0fdebbe4a817ed7097f9'
+class Qsnp < Formula
+  homepage 'http://qcmg.org/bioinformatics/tiki-index.php?page=qSNP'
+  version '1.0'
+  url 'http://qcmg.org/bioinformatics/tiki-download_file.php?fileId=27'
+  sha1 '7a9dedc78c111747ea385088eebaebcde3b7ee73'
 
   def install
-    java = share / 'java' / 'qsignature'
+    java = share / 'java' / 'qsnp'
     java.install Dir['*.jar']
     bin.mkdir
-    open(bin / 'qsignature', 'w') do |file|
+    open(bin / 'qsnp', 'w') do |file|
       file.write <<-EOS.undent
         #!/bin/bash
         default_jvm_mem_opts="-Xms750m -Xmx2g"
@@ -36,12 +36,12 @@ class Qsignature < Formula
         if [ "$jvm_mem_opts" == "" ]; then
             jvm_mem_opts="$default_jvm_mem_opts"
         fi
-        eval java $jvm_mem_opts $jvm_prop_opts -cp #{java}/qsignature-#{version}.jar $pass_args
+        eval java $jvm_mem_opts $jvm_prop_opts -jar #{java}/qsnp-#{version}.jar $pass_args
       EOS
     end
   end
 
   test do
-    system 'qsignature -h'
+    system 'qsnp -h'
   end
 end
