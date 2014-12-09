@@ -3,16 +3,15 @@ require 'formula'
 class Biobambam < Formula
   homepage 'https://github.com/gt1/biobambam'
   version '0.0.182'
-  url 'https://github.com/gt1/biobambam/archive/0.0.182-release-20141201100458.tar.gz'
-  sha1 '799a6e6d80b2044b9b7fcc0fb300cb9d688c27f8'
+  url "https://github.com/gt1/biobambam/releases/download/0.0.182-release-20141201100458/biobambam-0.0.182-release-20141201100458-x86_64-etch-linux-gnu.tar.gz"
+  sha1 "1aba534e4d3a1d78d0b6cfc2eea3d8e69ddebb1d"
 
-  depends_on 'libmaus'
+  depends_on 'staden_io_lib'
 
   def install
-    system "export PKG_CONFIG=$(export PATH=#{HOMEBREW_PREFIX}/bin:$PATH && which pkg-config)"
-    system './configure', "--prefix=#{prefix}"
-    system 'make'
-    system 'make install'
+    libexec.install Dir["*"]
+    bin.install_symlink Dir["#{libexec}/bin/bam*"]
+    man.install_symlink Dir["#{libexec}/share/man/man*/bam*"]
   end
 
   test do
