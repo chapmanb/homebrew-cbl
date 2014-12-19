@@ -1,6 +1,6 @@
 require 'formula'
 
-class Express < Formula
+class ExpressBinary < Formula
   homepage 'http://bio.math.berkeley.edu/eXpress/'
   version '1.5.1'
   if OS.mac?
