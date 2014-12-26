@@ -2,9 +2,9 @@ require 'formula'
 
 class Scalpel < Formula
   homepage 'http://scalpel.sourceforge.net/'
-  version '0.3.1'
-  url 'http://downloads.sourceforge.net/project/scalpel/scalpel-0.3.1.tar.gz'
-  sha1 "b04890373ef730b715f179d434c875c1d5329bd7"
+  version '0.3.1_1-effa7433'
+  url "http://sourceforge.net/code-snapshots/git/s/sc/scalpel/code.git/scalpel-code-effa7433df323fe799270c55ced20ddb1708fa95.zip"
+  sha1 "a6af55a3eb4af004c6b87d45928f1002701bf4a0"
 
   patch do
     # Use samtools by chromosome to avoid pulling the full genome into memory
