@@ -14,6 +14,11 @@ class Scalpel < Formula
 
   def install
     ENV.deparallelize
+    inreplace 'ExportVariants.pl' do |s|
+      # Remove incorrect filter specification which causes parsing issues with GATK
+      s.sub! "ID=MS,Number=1,Type=STRING", "ID=MS"
+      s.sub! "ID=lowCov,Number=0,Type=flag", "ID=lowCov"
+    end
     inreplace 'scalpel' do |s|
       # Include PATH to perl libraries
       s.sub! 'use Usage;', "use lib '#{prefix}';\nuse Usage;"
