@@ -12,6 +12,13 @@ class Scalpel < Formula
     sha1 "e58a688e0dd8be8d7cc3fd47105d20c98b1830d7"
   end
 
+  patch do
+    # Ensure pathlimit argument passed along to somatic and denovo commands
+    # Ensure reference passed to export commands
+    url "https://gist.githubusercontent.com/chapmanb/43e363680223656440de/raw/406a5efaba5d3fc0ed341a7daa2e30abc0228112/scalpel_pathlimit.patch"
+    sha1 "771437c4b83a25ad286c1d1013bb0b2358ca35e2"
+  end
+
   def install
     ENV.deparallelize
     inreplace 'ExportVariants.pl' do |s|
