@@ -2,13 +2,12 @@ require 'formula'
 
 class Oncofuse < Formula
   homepage 'https://github.com/mikessh/oncofuse'
-  version '1.0.7'
-  url 'https://github.com/mikessh/oncofuse/releases/download/v1.0.7/oncofuse-v1.0.7.zip'
-  sha1 '2070fda1a653bb487b35471372c27601028e8548'
-  
+  version '1.0.9'
+  url 'https://github.com/mikessh/oncofuse/releases/download/1.0.9a/oncofuse-1.0.9.zip'
+  sha1 'c23a93bed693a4641a834f10b69bacf2a4e6cb74'
+
   def install
     # avoid confusion with __MACOSX folder
-    cd "oncofuse-v#{version}"
     java=share/'java/oncofuse'
     java.install Dir['*', "oncofuse-v#{version}/*"]
     bin.mkdir
