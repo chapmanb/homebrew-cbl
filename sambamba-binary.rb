@@ -2,13 +2,13 @@ require 'formula'
 
 class SambambaBinary < Formula
   homepage 'https://github.com/lomereiter/sambamba'
-  version '0.4.7'
+  version '0.5.1'
   if OS.mac?
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_osx.tar.bz2"
-    sha1 'f2109903023ea0006d94224f3823a2353abe1809'
+    sha1 "0a5aa5a52263ad15f1453cc90fb8f5499d3280d6"
   else
-    url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_centos5.tar.bz2"
-    sha1 '0191c4dd99d40516e912f19725b6115ba4622fd0'
+    url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_linux.tar.bz2"
+    sha1 "ff6942043e42e1ffb5ba74f9d62c5ac9c40e0f25"
   end
 
   def install
