@@ -2,9 +2,9 @@ require 'formula'
 
 class Scalpel < Formula
   homepage 'http://scalpel.sourceforge.net/'
-  version '0.3.1_4-e51eb1'
-  url "https://s3.amazonaws.com/cloudbiolinux/cache/scalpel-code-e51eb12a2cc95326be31d3a1f7b92b9b63d2e39c.zip"
-  sha1 "594c3df366be1582f9b2845861a089fde5e59b23"
+  version '0.3.1_5-2d23b7'
+  url "https://s3.amazonaws.com/cloudbiolinux/cache/scalpel-code-2d23b7192228894d97fc6d8ffe4bc1b0618c9861.zip"
+  sha1 "7e584a338ee96e2802acdac4092aef43529d2697"
 
   def install
     ENV.deparallelize
