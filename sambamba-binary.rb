@@ -5,10 +5,10 @@ class SambambaBinary < Formula
   version '0.5.1'
   if OS.mac?
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_osx.tar.bz2"
-    sha1 "0a5aa5a52263ad15f1453cc90fb8f5499d3280d6"
+    sha1 "5d916fc1314913557988382822b9f9f070795ca5"
   else
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_linux.tar.bz2"
-    sha1 "ff6942043e42e1ffb5ba74f9d62c5ac9c40e0f25"
+    sha1 "bc7a02d2b377782593f2c06c6f3550417a9984cb"
   end
 
   def install
