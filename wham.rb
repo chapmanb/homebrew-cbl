@@ -20,8 +20,8 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version '1.7.0'
-  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "0ecae52"
+  version '1.7.0-6'
+  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "f3e05eb"
 
   depends_on "bamtools"
 
