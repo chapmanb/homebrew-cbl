@@ -20,8 +20,8 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version '1.7.0-6'
-  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "f3e05eb"
+  version '1.7.0-7'
+  url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "8e0cd01"
 
   depends_on "bamtools"
 
@@ -37,6 +37,7 @@ class Wham < Formula
     system "make"
     bin.install "bin/WHAM-BAM"
     (share/"wham").install "utils/WHAM_training_data.txt"
+    (share/"wham").install "utils/WHAM_training_phase3_10bp_training.txt"
     (share/"wham").install "utils/classify_WHAM_vcf.py"
     (share/"wham").install "utils/whamToBed.pl"
   end
