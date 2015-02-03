@@ -2,9 +2,9 @@ require 'formula'
 
 class Vt < Formula
   homepage 'https://github.com/atks/vt'
-  version '2015-01-25'
-  url "https://github.com/atks/vt/archive/5f68742.tar.gz"
-  sha1 "96ce18ccdb6a6a43db712a22e7a8617a7bff9cb5"
+  version '2015-02-02'
+  url "https://github.com/atks/vt/archive/e51d17e.tar.gz"
+  sha1 "0f79a4082be82c9abab54bd2846d0c6e727dedce"
 
   def install
     system 'make'
