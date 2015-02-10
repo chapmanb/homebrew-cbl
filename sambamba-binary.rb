@@ -2,7 +2,7 @@ require 'formula'
 
 class SambambaBinary < Formula
   homepage 'https://github.com/lomereiter/sambamba'
-  version '0.5.2a-2015_02_02'
+  version '0.5.2a-2015-02-02'
   if OS.mac?
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_osx.tar.bz2"
     sha1 "5d916fc1314913557988382822b9f9f070795ca5"
