@@ -1,26 +1,10 @@
 require 'formula'
 
-class FlatGitDownloadStrategy < GitDownloadStrategy
-  def clone_args
-    args = %w{clone}
-    args << @url << @clone
-  end
-  def stage
-    FileUtils.cp_r Dir[@clone+"{.}"], Dir.pwd
-    checkout
-  end
-  def repo_valid?
-    false
-  end
-  def submodules?
-    false
-  end
-end
-
 class Speedseq < Formula
-  homepage 'https://github.com/cc2qe/speedseq'
-  version '2014-08-22'
-  url 'https://github.com/cc2qe/speedseq.git', :using => FlatGitDownloadStrategy, :revision => '4c95193a'
+  homepage "https://github.com/cc2qe/speedseq"
+  version "2014-08-22"
+  url "https://github.com/cc2qe/speedseq/archive/4c95193a.tar.gz"
+  sha1 "122233d61ffa64bcd8508d3f9ff6af13a531f676"
 
   depends_on 'lumpy-sv' => :optional
   depends_on 'sambamba' => :optional
