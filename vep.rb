@@ -25,6 +25,7 @@ class Vep < Formula
     inreplace 'scripts/variant_effect_predictor/INSTALL.pl' do |s|
       s.sub! "$DEST_DIR ||= '.';", "$DEST_DIR ||= '#{prefix}/lib';"
       s.sub! "$CACHE_DIR    ||= $ENV{HOME} ? $ENV{HOME}.'/.vep' : 'cache';", "$CACHE_DIR    ||= '#{share}/data';"
+      s.sub! "our $use_curl = 0", "our $use_curl = 1"
     end
     inreplace 'scripts/variant_effect_predictor/convert_cache.pl' do |s|
       s.sub! 'use strict;', "use strict;\nuse lib '#{prefix}/lib';"
