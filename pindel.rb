@@ -16,6 +16,11 @@ class Pindel < Formula
   def install
     samtools = prefix / 'samtools'
     resource('samtools').stage do
+      # Build without curses
+      inreplace "Makefile" do |s|
+        s.gsub! "-D_CURSES_LIB=1", "-D_CURSES_LIB=0"
+        s.gsub! "-lcurses", "# -lcurses"
+      end
       system 'make'
       samtools.install Dir['*']
     end
