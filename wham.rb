@@ -20,7 +20,7 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version '1.7.0-13'
+  version "1.7.0-15"
 
   resource "wham-binary" do
     url "https://s3.amazonaws.com/cloudbiolinux/binaries/WHAM-BAM-1.7.0-13"
@@ -30,16 +30,16 @@ class Wham < Formula
   option "with-binary", "Install a statically linked binary for 64-bit Linux" if OS.linux?
 
   if build.without? "binary"
-    url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "b7460ae"
+    url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "dd56f48"
     depends_on "bamtools"
   else
-    url "https://github.com/jewmanchue/wham/archive/b7460ae.tar.gz"
-    sha1 "bb43f5909af8d778a6eb06f363a7b215bc45edc5"
+    url "https://github.com/jewmanchue/wham/archive/dd56f48.tar.gz"
+    sha1 "49b8f7a9d4fb8dc31c569ee5e18d638ed6974954"
   end
 
   def install
     if build.with? "binary"
-      resource("wham-binary").stage { bin.install "WHAM-BAM-#{version}" => "WHAM-BAM"}
+      resource("wham-binary").stage { bin.install "WHAM-BAM-1.7.0-13" => "WHAM-BAM"}
     else
       inreplace "Makefile" do |s|
         # Link bamtools dependency to external brew package
