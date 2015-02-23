@@ -2,9 +2,9 @@ require 'formula'
 
 class BcbioVariationRecall < Formula
   homepage "https://github.com/chapmanb/bcbio.variation.recall/"
-  version "0.0.6"
+  version "0.0.7"
   url "https://github.com/chapmanb/bcbio.variation.recall/releases/download/v#{version}/bcbio-variation-recall"
-  sha1 "fc5f989d4e99b406838435ed82145be8368f1ab3"
+  sha1 "73bff0e8e25f0d8acf9e24fc706a36c2d14751d9"
 
   def install
     bin.install "bcbio-variation-recall"
