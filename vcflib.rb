@@ -25,6 +25,9 @@ class Vcflib < Formula
 
   def install
     ENV.deparallelize
+    inreplace 'Makefile' do |s|
+      s.sub! "CXXFLAGS = -O3 -D_FILE_OFFSET_BITS=64", "CXXFLAGS = -msse2 -O3 -D_FILE_OFFSET_BITS=64"
+    end
     system 'make'
     bin.install Dir['bin/*']
   end
