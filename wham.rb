@@ -20,7 +20,7 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version "1.7.0-15"
+  version "1.7.0-16"
 
   resource "wham-binary" do
     url "https://s3.amazonaws.com/cloudbiolinux/binaries/WHAM-BAM-1.7.0-13"
@@ -33,8 +33,8 @@ class Wham < Formula
     url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "dd56f48"
     depends_on "bamtools"
   else
-    url "https://github.com/jewmanchue/wham/archive/dd56f48.tar.gz"
-    sha1 "49b8f7a9d4fb8dc31c569ee5e18d638ed6974954"
+    url "https://github.com/jewmanchue/wham/archive/413c3f2.tar.gz"
+    sha1 "61a583e42e1771b265fc7eabcc176d0521cf40da"
   end
 
   def install
