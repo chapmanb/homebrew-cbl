@@ -2,9 +2,9 @@ require 'formula'
 
 class Cramtools < Formula
   homepage 'http://www.ebi.ac.uk/ena/about/cram_toolkit/'
-  version '2.1-b240'
-  url 'https://github.com/enasequence/cramtools/raw/master/cramtools-2.1.jar'
-  sha1 "035e064ce5c9dda72e231e2491ebb80311d6ced1"
+  version '2.1-b267'
+  url "https://github.com/enasequence/cramtools/raw/740faeff7695d59cf2899b565ee18eca06d90e21/cramtools-2.1.jar"
+  sha1 "765fdfd0ebfa32722db5a633dc3b029ded2df5b6"
 
   def install
     jarversion = '2.1'
