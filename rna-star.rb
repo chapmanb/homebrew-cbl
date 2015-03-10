@@ -2,9 +2,9 @@ require 'formula'
 
 class RnaStar < Formula
   homepage 'https://code.google.com/p/rna-star'
-  version '2.4.0f1'
-  url 'https://github.com/alexdobin/STAR/archive/STAR_2.4.0f1.tar.gz'
-  sha1 '17ec3989ac226e8c8ea831d38da9d6cd039791c5'
+  version '2.4.0j'
+  url 'https://github.com/alexdobin/STAR/archive/STAR_2.4.0j.tar.gz'
+  sha1 'efb1d31ae098673fd03a6269ea97c01bdc82cc96'
 
   def install
     if OS.mac?
