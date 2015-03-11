@@ -7,7 +7,7 @@ class SambambaBinary < Formula
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_osx.tar.bz2"
     sha1 "5d916fc1314913557988382822b9f9f070795ca5"
   else
-    url "https://dl.dropboxusercontent.com/u/7916095/sambamba_02_02_2015"
+    url "https://s3.amazonaws.com/cloudbiolinux/cache/sambamba_02_02_2015"
     #url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_linux.tar.bz2"
     sha1 "4906ce721fa48273738eae34e630f0c9ca65f2bc"
   end
