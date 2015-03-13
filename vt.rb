@@ -2,15 +2,15 @@ require 'formula'
 
 class Vt < Formula
   homepage 'https://github.com/atks/vt'
-  version '2015-02-10'
-  url "https://github.com/atks/vt/archive/a632462.tar.gz"
-  sha1 "1fc41946edc05cae5df44f8216c2339ea9d7157f"
+  version '2015-03-12'
+  url "https://github.com/atks/vt/archive/10b7b2b.tar.gz"
+  sha1 "d56ec15c38db4339a041a030a8db5f5216f2e981"
 
   option "with-binary", "Install a statically linked binary for 64-bit Linux" if OS.linux?
 
   resource "vt-binary" do
-    url "https://s3.amazonaws.com/cloudbiolinux/binaries/vt-centos5-2015-02-10"
-    sha1 "87b7d1ab1cdf7df5a6807f46da1f7fe38705a773"
+    url "https://s3.amazonaws.com/cloudbiolinux/binaries/vt-centos5-2015-03-12"
+    sha1 "ba3060c4074fa8f9b4d6d0ce38730ee856e1dad8"
   end
 
   def install
