@@ -9,13 +9,13 @@ class Vt < Formula
   option "with-binary", "Install a statically linked binary for 64-bit Linux" if OS.linux?
 
   resource "vt-binary" do
-    url "https://s3.amazonaws.com/cloudbiolinux/binaries/vt-centos5-2015-03-12"
+    url "https://s3.amazonaws.com/cloudbiolinux/binaries/vt-centos5-2015.03.12"
     sha1 "ba3060c4074fa8f9b4d6d0ce38730ee856e1dad8"
   end
 
   def install
     if build.with? "binary"
-      resource("vt-binary").stage { bin.install "vt-centos5-#{version}" => "vt"}
+      resource("vt-binary").stage { bin.install "vt-centos5-2015.03.12" => "vt"}
     else
       system 'make'
       bin.install 'vt'
