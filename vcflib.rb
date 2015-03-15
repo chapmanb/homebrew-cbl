@@ -20,8 +20,8 @@ end
 
 class Vcflib < Formula
   homepage 'https://github.com/ekg/vcflib'
-  version '2014-12-12'
-  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => 'b1dfd7a7'
+  version '2015-03-13'
+  url 'https://github.com/ekg/vcflib.git', :using => RecursiveGitDownloadStrategy, :revision => 'b1e9b31'
 
   def install
     ENV.deparallelize
