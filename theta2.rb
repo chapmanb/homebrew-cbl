@@ -2,9 +2,9 @@ require 'formula'
 
 class Theta2 < Formula
   homepage "https://github.com/raphael-group/THetA"
-  version "0.62"
-  url "https://github.com/raphael-group/THetA/archive/8a935dbb.tar.gz"
-  sha1 "05d9eb1ead43f085732250e5f4cb3e329875b8c5"
+  version "0.62-2015-03-08"
+  url "https://github.com/raphael-group/THetA/archive/86c1d4b.tar.gz"
+  sha1 "c94963be7fff41309882e1e79ace9aa927dc560d"
 
   def install
     # Does not compile and install java code only needed for BIC-seq parsing
