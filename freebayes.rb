@@ -7,7 +7,7 @@ class RecursiveGitDownloadStrategy < GitDownloadStrategy
     args << @url << @clone
   end
   def stage
-    FileUtils.cp_r Dir[@clone+"{.}"], Dir.pwd
+    cp_r Dir[@clone+"{.}"], Dir.pwd
     checkout
   end
   def repo_valid?
@@ -24,6 +24,7 @@ class Freebayes < Formula
   url 'https://github.com/ekg/freebayes.git', :using => RecursiveGitDownloadStrategy, :revision => '7dd41db'
 
   depends_on 'cmake' => :build
+  depends_on 'parallel'
 
   def install
     ENV.deparallelize
@@ -41,11 +42,28 @@ class Freebayes < Formula
       system 'make autoversion'
     end
     system 'make'
+
     bin.install 'bin/freebayes'
     bin.install 'bin/bamleftalign'
+
+    bin.install 'scripts/freebayes-parallel'
+
+    inreplace 'scripts/fasta_generate_regions.py', '#!/usr/bin/python', '#!/usr/bin/env python'
+    bin.install 'scripts/fasta_generate_regions.py'
+
+    # this script uses 'env' alreayd, no need to fix
+    bin.install 'scripts/coverage_to_regions.py'
+
+    bin.install 'scripts/generate_freebayes_region_scripts.sh'
+
+    doc.install 'README.md'
+    doc.install 'LICENSE'
   end
 
   test do
-    system 'freebayes'
+    system "#{bin}/freebayes", '--version'
+    system "#{bin}/freebayes-parallel"
+    system "#{bin}/fasta_generate_regions.py"
+    system "#{bin}/coverage_to_regions.py"
   end
 end
