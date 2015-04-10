@@ -2,17 +2,17 @@ require 'formula'
 
 class SambambaBinary < Formula
   homepage 'https://github.com/lomereiter/sambamba'
-  version '0.5.2a-2015-03-18'
+  version '0.5.2'
   if OS.mac?
     url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_osx.tar.bz2"
-    sha1 "5d916fc1314913557988382822b9f9f070795ca5"
+    sha1 "caf3c1259cd30acc1b71470334f77a2bcb1170a2"
   else
-    url "https://s3.amazonaws.com/cloudbiolinux/cache/sambamba_0.5.2a-2015-03-18"
-    sha1 "b3f9628e41956c0e4c0f49976f6bc406514efa97"
+    url "https://github.com/lomereiter/sambamba/releases/download/v#{version}/sambamba_v#{version}_linux.tar.bz2"
+    sha1 "bc195de83029a55d0f9a8abfb200a674584c8fd2"
   end
 
   def install
-    bin.install "sambamba_#{version}" => "sambamba"
+    bin.install "sambamba_v#{version}" => "sambamba"
   end
 
   test do
