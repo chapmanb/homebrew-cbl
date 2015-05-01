@@ -3,8 +3,8 @@ require 'formula'
 class Vardict < Formula
   homepage "https://github.com/AstraZeneca-NGS/VarDict"
   version "2015-04-22"
-  url "https://github.com/AstraZeneca-NGS/VarDict/archive/20eaa69.tar.gz"
-  sha1 "5f7aaad06e0d69f5701d03d05145a871097fb631"
+  url "https://github.com/AstraZeneca-NGS/VarDict/archive/8f6dc6e.tar.gz"
+  sha1 "a562961614e2825a701a0653e27016e0e26d7acf"
 
   def install
     prefix.install Dir['*']
