@@ -1,12 +1,10 @@
 require 'formula'
 
 class Biobambam < Formula
-  homepage 'https://github.com/gt1/biobambam'
-  version '0.0.182'
-  url "https://github.com/gt1/biobambam/releases/download/0.0.182-release-20141201100458/biobambam-0.0.182-release-20141201100458-x86_64-etch-linux-gnu.tar.gz"
-  sha1 "1aba534e4d3a1d78d0b6cfc2eea3d8e69ddebb1d"
-
-  depends_on 'staden_io_lib'
+  homepage 'https://github.com/gt1/biobambam2'
+  version '2.0.8'
+  url "https://github.com/gt1/biobambam2/releases/download/2.0.8-release-20150427235350/biobambam2-2.0.8-release-20150427235350-x86_64-etch-linux-gnu.tar.gz"
+  sha1 "b6c8d886baf11dd4e26b921b91ffada67f99a6b1"
 
   def install
     libexec.install Dir["*"]
