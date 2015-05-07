@@ -2,18 +2,18 @@ require 'formula'
 
 class Vep < Formula
   homepage 'http://ensembl.org/info/docs/variation/vep/index.html'
-  version '75_2014-06-12'
-  url 'https://github.com/Ensembl/ensembl-tools/archive/771dfa1016c357145be7016c91e1155ae7c021f2.zip'
-  sha1 '141a8c639c442bf02d15846fab534dbe58dec3e4'
+  version '79_2015-04-13'
+  url 'https://github.com/Ensembl/ensembl-tools/archive/4a86cbf.zip'
+  sha1 "4bdb9a9dfd77b7d5fad552d25f65fa7095262144"
 
   resource "plugins" do
-    url "https://github.com/ensembl-variation/VEP_plugins/archive/2c123faff2deef07ee094984fc44e19c48975af4.zip"
-    sha1 "0569239ed8255d277db034d838d6ec51b90481a8"
+    url "https://github.com/ensembl-variation/VEP_plugins/archive/5b4db9b.zip"
+    sha1 "a12c46e68e9cff5e2cd501533da5139db408aa57"
   end
 
   resource 'loftee' do
-    url 'https://github.com/konradjk/loftee/archive/545cf9ac5f25b6a6872984dd1a3197a7e7caf000.zip'
-    sha1 'a61c6196964526becfbe7afa9838d0495d7996e9'
+    url 'https://github.com/konradjk/loftee/archive/0c833d3.zip'
+    sha1 "5520ce42d0f067755019865173a4e9f26d9e4159"
   end
 
   def install
