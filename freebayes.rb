@@ -23,7 +23,7 @@ class Freebayes < Formula
   version '0.9.21-7'
   url 'https://github.com/ekg/freebayes.git', :using => RecursiveGitDownloadStrategy, :revision => '7dd41db'
 
-  #depends_on 'cmake' => :build
+  depends_on 'cmake' => :build
   depends_on 'parallel'
 
   def install
