@@ -4,16 +4,16 @@ class Vep < Formula
   homepage 'http://ensembl.org/info/docs/variation/vep/index.html'
   version '79_2015-04-13'
   url 'https://github.com/Ensembl/ensembl-tools/archive/4a86cbf.zip'
-  sha1 "4bdb9a9dfd77b7d5fad552d25f65fa7095262144"
+  sha1 "63064909ffbda19c4238996be85abfef61d09f43"
 
   resource "plugins" do
     url "https://github.com/ensembl-variation/VEP_plugins/archive/5b4db9b.zip"
-    sha1 "a12c46e68e9cff5e2cd501533da5139db408aa57"
+    sha1 "6860674311dffcde868f82d134d7da8fcc9d36f2"
   end
 
   resource 'loftee' do
     url 'https://github.com/konradjk/loftee/archive/0c833d3.zip'
-    sha1 "5520ce42d0f067755019865173a4e9f26d9e4159"
+    sha1 "308a9141e0c0ceb6470402544668fe2190d2c390"
   end
 
   def install
