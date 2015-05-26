@@ -1,24 +1,26 @@
 require 'formula'
 
 class RtgTools < Formula
-  homepage 'ftp://ftp-trace.ncbi.nih.gov/giab/ftp/tools/RTG/'
-  version '1.0.0'
+  homepage "http://realtimegenomics.com/products/rtg-tools/"
+  version "3.4.4"
 
-  url 'ftp://ftp-trace.ncbi.nih.gov/giab/ftp/tools/RTG/rtg-tools-1.0.0-nojre.zip'
-  sha1 '0250d4e3ce4f697948a3a7c035615603c92c9a9d'
+  url "https://github.com/RealTimeGenomics/rtg-core/releases/download/3.4.4/rtg-tools-3.4.4-nojre.zip"
+  sha1 "ca6d53feadea4f2b1921292cc9f44bc64742a014"
 
   def install
     java = share / 'java'
     java.install 'RTG.jar'
     doc.install 'RTGOperationsManual.pdf'
-    prefix.install 'EULA.txt'
+    prefix.install 'LICENSE.txt'
     prefix.install 'README.txt'
+    prefix.install 'ReleaseNotes.txt'
     prefix.install 'rtg'
+    prefix.install 'third-party'
     open(prefix / 'rtg.cfg', 'w') do |file|
       file.write <<-EOS.undent
         RTG_TALKBACK=     # Attempt to send crash logs to realtime genomics, true to enable
-        RTG_USAGE=           # Enable simple usage logging, true to enable
-        RTG_JAVA_OPTS=                 # Additional arguments passed to the JVM
+        RTG_USAGE=        # Enable simple usage logging, true to enable
+        RTG_JAVA_OPTS=    # Additional arguments passed to the JVM
         RTG_JAR=#{java}/RTG.jar
       EOS
     end
