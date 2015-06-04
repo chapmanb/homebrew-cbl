@@ -2,10 +2,10 @@ require 'formula'
 
 class RtgTools < Formula
   homepage "http://realtimegenomics.com/products/rtg-tools/"
-  version "3.4.4"
+  version "3.4.5"
 
-  url "https://github.com/RealTimeGenomics/rtg-core/releases/download/3.4.4/rtg-tools-3.4.4-nojre.zip"
-  sha1 "ca6d53feadea4f2b1921292cc9f44bc64742a014"
+  url "https://github.com/RealTimeGenomics/rtg-core/releases/download/3.4.5/rtg-tools-3.4.5-nojre.zip"
+  sha1 "59c6290db97401111e4a8c5213d9354c834ccc48"
 
   def install
     java = share / 'java'
