@@ -13,7 +13,7 @@ class SpadesBinary < Formula
 
   def install
     bin.install Dir["bin/*"]
-    share.install "share"
+    share.install Dir["share/*"]
   end
 
   test do
