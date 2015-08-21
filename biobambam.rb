@@ -2,9 +2,9 @@ require 'formula'
 
 class Biobambam < Formula
   homepage 'https://github.com/gt1/biobambam2'
-  version '2.0.8'
-  url "https://github.com/gt1/biobambam2/releases/download/2.0.8-release-20150427235350/biobambam2-2.0.8-release-20150427235350-x86_64-etch-linux-gnu.tar.gz"
-  sha1 "b6c8d886baf11dd4e26b921b91ffada67f99a6b1"
+  version '2.0.14'
+  url "https://github.com/gt1/biobambam2/releases/download/2.0.14-release-20150809134108/biobambam2-2.0.14-release-20150809134108-x86_64-etch-linux-gnu.tar.gz"
+  sha256 "fb8c5bf671f95445765f8ebe833c1107f987747ae636e865b559230f210c7019"
 
   def install
     libexec.install Dir["*"]
