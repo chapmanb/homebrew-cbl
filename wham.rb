@@ -24,7 +24,7 @@ class Wham < Formula
 
   resource "wham-binary" do
     url "https://s3.amazonaws.com/cloudbiolinux/binaries/WHAM-binaries-1.7.0-146.tar.gz"
-    sha256 "2af88b02dd019c88f96353e5211e39eccc1cfe016023963283df505ff8a738db"
+    sha256 "ec5fe098b4a146b2b89a94afd2c7eddfa89857dcbd0f6dd26358b4673e60ebf4"
   end
 
   option "with-binary", "Install a statically linked binary for 64-bit Linux" if OS.linux?
