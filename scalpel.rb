@@ -17,15 +17,18 @@ class Scalpel < Formula
       s.sub! 'use Usage;', "use lib '#{prefix}';\nuse Usage;"
     end
     inreplace 'Utils.pm' do |s|
+      # Use system bamtools instead of local, which doesn't load libbamtools
+      s.gsub! "$Bin/bamtools-2.3.0/bin/", ""
       # Ensure local scripts point to installation
       s.gsub! '$Bin/', "#{prefix}/"
       # Use bash instead of /bin/sh default, which points to dash on ubuntu
       s.sub! 'system($cmd)', 'system("/bin/bash -c \'$cmd\'")'
     end
     inreplace 'Makefile', 'CXX := g++', "CXX := #{ENV.cxx}"
+    # Avoid building bamtools
+    inreplace "Makefile", "bamtools samtools", "samtools"
     chmod 0755, 'FindVariants.pl'
     chmod 0755, 'FindSomatic.pl'
-    system 'make bamtools'
     system 'make Microassembler'
     system 'make'
     prefix.install Dir['*']
