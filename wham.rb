@@ -20,21 +20,21 @@ end
 
 class Wham < Formula
   homepage "https://github.com/jewmanchue/wham"
-  version "1.7.0-150"
+  version "1.7.0-154"
 
   resource "wham-binary" do
-    url "https://s3.amazonaws.com/cloudbiolinux/binaries/WHAM-binaries-1.7.0-150.tar.gz"
-    sha256 "d7f22cb8569d7af73ceeb2780ca3eead8f5fc3ad524aa0b83b9c8d315751d777"
+    url "https://s3.amazonaws.com/cloudbiolinux/binaries/WHAM-binaries-1.7.0-154.tar.gz"
+    sha256 "e2189f41851acb583c4b3704edbe3f9e4a09c7eb0d7192b8ed61d1d3e094b14f"
   end
 
   option "with-binary", "Install a statically linked binary for 64-bit Linux" if OS.linux?
 
   if build.without? "binary"
-    url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "a421e58"
+    url 'https://github.com/jewmanchue/wham.git', :using => RecursiveGitDownloadStrategy, :revision => "c7993e3"
     depends_on "bamtools"
   else
-    url "https://github.com/jewmanchue/wham/archive/a421e58.tar.gz"
-    sha256 "af2b5860a245f018d311cda13a6208076ae1f512181eb1f08e923de4011b8524"
+    url "https://github.com/jewmanchue/wham/archive/c7993e3.tar.gz"
+    sha256 "18b599cb3025c1df711af94542f6dd16070010db504f60de85e1f6f8fca6c1f4"
   end
 
   def install
