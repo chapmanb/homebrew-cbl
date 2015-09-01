@@ -2,7 +2,7 @@ require 'formula'
 
 class Scalpel < Formula
   homepage 'http://scalpel.sourceforge.net/'
-  version '0.3.1_5-2d23b7-2'
+  version '0.3.1_5-2d23b7-3'
   url "https://s3.amazonaws.com/cloudbiolinux/cache/scalpel-code-2d23b7192228894d97fc6d8ffe4bc1b0618c9861.zip"
   sha1 "7e584a338ee96e2802acdac4092aef43529d2697"
 
@@ -27,6 +27,8 @@ class Scalpel < Formula
       # Use bash instead of /bin/sh default, which points to dash on ubuntu
       s.sub! 'system($cmd)', 'system("/bin/bash -c \'$cmd\'")'
     end
+    # path to local bamtools specified in two locations
+    inreplace "SequenceIO.pm", "$Bin/bamtools-2.3.0/bin/", ""
     inreplace 'Makefile', 'CXX := g++', "CXX := #{ENV.cxx}"
     # Avoid building bamtools samtools bcftools
     inreplace "Makefile", "bamtools samtools bcftools", ""
