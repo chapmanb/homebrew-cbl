@@ -10,9 +10,9 @@ class Manta < Formula
   desc "Structural variant and indel caller for mapped sequencing data"
   homepage "https://github.com/Illumina/manta"
 
-  version "0.27.1"
+  version "0.28.0"
   url "https://github.com/Illumina/manta/releases/download/v#{version}/manta-#{version}.centos5_x86_64.tar.bz2"
-  sha256 "788a0a184168ed91bd3cf0c44dda6b9186fd9562476203b8e92b20e963f48769"
+  sha256 "aef97bc887cbfca8cfe2e3a076c52bc95b8ecd37f1586b433211cacfcce14ae0"
 
   depends_on LinuxRequirement
 
