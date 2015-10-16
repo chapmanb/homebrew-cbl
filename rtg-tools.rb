@@ -2,18 +2,16 @@ require 'formula'
 
 class RtgTools < Formula
   homepage "http://realtimegenomics.com/products/rtg-tools/"
-  version "3.5.1"
+  version "3.5.2"
 
-  url "https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.5.1/rtg-tools-3.5.1-nojre.zip"
-  sha1 "ca241f91b9acb40c60b0bf602c4c139e7855e21e"
+  url "https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.5.2/rtg-tools-3.5.2-nojre.zip"
+  sha1 "0bee838390813c730c95e4da7f8018fd6e4b7a7a"
 
   def install
     java = share / 'java'
     java.install 'RTG.jar'
     doc.install 'RTGOperationsManual.pdf'
-# The new open source release doesn't include a LICENSE.txt in the binary
-# Although on reflection it probably should. Will address in the next point release.
-#    prefix.install 'LICENSE.txt'
+    prefix.install 'LICENSE.txt'
     prefix.install 'README.txt'
     prefix.install 'ReleaseNotes.txt'
     prefix.install 'rtg'
