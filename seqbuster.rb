@@ -1,9 +1,9 @@
 require 'formula'
 class Seqbuster < Formula
 homepage 'https://github.com/lpantano/seqbuster'
-version '1.0'
-url 'https://github.com/lpantano/seqbuster/archive/3.1.tar.gz'
-sha1 '39342214043e855527e10f25a40d699160953ad1'
+version '2.2'
+url 'https://github.com/lpantano/seqbuster/archive/miraligner-2.2.zip'
+sha1 '2aa7507befaf842f6c253d4da667f8f26245499a'
 def install
   java = share / 'java' / 'seqbuster'
   java.install Dir['*']
