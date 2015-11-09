@@ -3,7 +3,7 @@ class Seqbuster < Formula
 homepage 'https://github.com/lpantano/seqbuster'
 version '2.3'
 url 'https://github.com/lpantano/seqbuster/archive/miraligner-2.3.zip'
-sha1 'c1546d6ec0527cdc3d6e41e4bc0e3b12219d5647'
+sha1 '260dcb6a5e3c2e6dbb6ada1944d3bb6cd5aa78f6'
 def install
   java = share / 'java' / 'seqbuster'
   java.install Dir['*']
