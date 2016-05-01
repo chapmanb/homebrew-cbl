@@ -1,4 +1,4 @@
-class Sailfish < Formula
+class SailfishCbl < Formula
   homepage "http://www.cs.cmu.edu/~ckingsf/software/sailfish"
   # doi "10.1038/nbt.2862"
   # tag "bioinformatics"
