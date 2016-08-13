@@ -1,19 +1,20 @@
 require 'formula'
 
 class Vep < Formula
-  homepage "http://ensembl.org/info/docs/variation/vep/index.html"
-  version "81_2015-07-23"
+  desc "Ensembl Variant Effect Predictor (VEP)"
+  homepage "http://ensembl.org/info/docs/tools/vep/index.html"
   url "https://github.com/Ensembl/ensembl-tools/archive/bfd0982.tar.gz"
-  sha1 "d33f30f7e2c233a11f47be6e4f397dc7a3f8dc84"
+  version "81_2015-07-23"
+  sha256 "7ff92a1baf5d803b129dfc3a5149cdf7b040582bda66b1d4365ff2219decf3d7"
 
   resource "plugins" do
     url "https://github.com/ensembl-variation/VEP_plugins/archive/a2f156db.tar.gz"
-    sha1 "1852279dc7b2f3ff5d57ee24f17f2242b53cb048"
+    sha256 "077ad2847d4c180a10ecc2b36fcecacf49b51695114617f3d3134ffed248079c"
   end
 
   resource "loftee" do
     url "https://github.com/konradjk/loftee/archive/e32f60a.tar.gz"
-    sha1 "bfbf2973c0129658f42db92b982e27489828d893"
+    sha256 "f54b22abe08abccff9038df50f254f282a910fab1a2e2f00da53c9b4337beefe"
   end
 
   def install
