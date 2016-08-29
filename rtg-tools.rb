@@ -5,7 +5,7 @@ class RtgTools < Formula
   version "3.7"
 
   url "https://github.com/RealTimeGenomics/rtg-tools/releases/download/3.7/rtg-tools-3.7-nojre.zip"
-  sha1 "623fbe5d5f715750b7a86c0c00618fb1580ce76a"
+  sha256 "d1dc8aaae4ccb80922f4f3a915da340a1da68da8db06b4f08cce61fc03bc02c3"
 
   def install
     java = share / 'java'
